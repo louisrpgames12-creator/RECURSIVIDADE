@@ -1,0 +1,17 @@
+#include <stdio.h>
+int potencial(int base, int potencia) {
+    if(potencia == 1) {
+        return base;
+    }
+    return base * potencial(base,potencia - 1);
+}
+
+int main() {
+    int base, potencia;
+    
+    printf("ME INFORME UMA BASE E UMA POTENCIA: ");
+    scanf("%d%d", &base, &potencia);
+
+    printf("%d", potencial(base, potencia));
+    return 0;
+}
