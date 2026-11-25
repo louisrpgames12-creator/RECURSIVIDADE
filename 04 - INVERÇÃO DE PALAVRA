@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+void invercao(char *palavra) {
+    if(*palavra == '\0')
+        return;
+    invercao(palavra + 1);
+    printf("%c", *palavra);
+}
+
+int main() {
+    char palavra[21];
+    
+    printf("DIGITE UMA PALAVRA: ");
+    scanf("%20[^\n]", palavra);
+    invercao(palavra);
+    
+    return 0;
+}
