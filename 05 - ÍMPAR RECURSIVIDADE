@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int fatorial_duplo(int impar) {
+    if(impar == 1) {
+        return 1;
+    }
+    if(impar % 2 == 1) {
+        return impar * fatorial_duplo(impar - 1);
+    } else {
+        return fatorial_duplo(impar - 1);
+    }
+}
+
+int main() {
+    int impar;
+    
+    printf("DIGITE UM NUMERO IMPAR: ");
+    scanf("%d", &impar);
+    printf("%d",fatorial_duplo(impar));
+    
+    return 0;
+}
