@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+float serie(float n) {
+    if(n == 1)
+        return 2;
+    return (1 + (n * n))/n + serie(n - 1);
+}
+
+int main() {
+    float n;
+
+    printf("ME INFORME UM VALOR DA SERIE: ");
+    scanf("%f", &n);
+    printf("%.2f", serie(n));
+
+    return 0;
+}
