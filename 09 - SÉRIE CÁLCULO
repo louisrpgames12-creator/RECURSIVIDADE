@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+float serie_calculo(float numero) {
+    if(numero == 1)
+        return (float)2/4;
+    return ((numero * numero) + 1)/(numero + 3) + serie_calculo(numero - 1);
+}
+
+int main() {
+    float numero;
+    
+    printf("ME INFORME UM NUMERO: ");
+    scanf("%f", &numero);
+
+    printf("%.2f",serie_calculo(numero));
+    
+    return 0;
+}
