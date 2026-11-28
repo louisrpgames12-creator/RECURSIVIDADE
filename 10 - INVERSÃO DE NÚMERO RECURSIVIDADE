@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+void inverter(int n) {
+    if(n == 0)
+        return;
+
+    printf("%d", n % 10);
+    inverter(n / 10);
+}
+
+int main() {
+    int numero;
+
+    printf("ME INFORME UM NUMERO: ");
+    scanf("%d", &numero);
+
+    inverter(numero);
+
+    return 0;
+}
