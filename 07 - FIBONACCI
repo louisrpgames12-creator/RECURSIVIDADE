@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int fibonacci(int numero) {
+    if(numero == 1 || numero == 2)
+        return 1;
+    return fibonacci(numero - 1) + fibonacci(numero - 2);
+}
+
+int main() {
+    int numero;
+    
+    printf("ME INFORME UM NUMERO: ");
+    scanf("%d", &numero);
+
+    printf("%d",fibonacci(numero));
+    return 0;
+}
